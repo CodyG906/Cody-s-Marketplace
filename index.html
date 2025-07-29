@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cody's Marketplace</title>
+  <style>
+    :root {
+      --bg: #f6f7f8;
+      --card-bg: #ffffff;
+      --accent: #ff6600;
+      --text: #333333;
+    }
+    body {
+      margin:0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.5;
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    h1 { margin:0; font-size: 2rem; }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 1.25rem;
+    }
+    .item-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      overflow: hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .item-card img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+    .item-card .content {
+      padding:1rem;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+    }
+    .item-card h3 { margin:0 0 0.5rem; font-size:1.2rem;}
+    .price { font-weight:600; margin-top:auto; }
+    .item-card a.button {
+      display:inline-block;
+      margin-top:0.75rem;
+      padding:0.5rem 1rem;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      border-radius:6px;
+      text-align:center;
+    }
+    footer {
+      text-align:center;
+      font-size:0.9rem;
+      padding:1.5rem;
+      color:#666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cody's Marketplace</h1>
+  </header>
+
+  <main>
+    <section class="catalog">
+      <!-- Duplicate these item-card blocks for as many products as you have -->
+      <article class="item-card">
+        <img src="https://source.unsplash.com/featured/400x300?bicycle" alt="Bike">
+        <div class="content">
+          <h3>Hybrid Bicycle 2020</h3>
+          <p>Lightweight aluminum frame, recently serviced, includes helmet and lock.</p>
+          <span class="price">$350</span>
+          <a class="button" href="mailto:you@example.com?subject=Interested%20in%20Hybrid%20Bicycle">Contact Seller</a>
+        </div>
+      </article>
+
+      <article class="item-card">
+        <img src="https://source.unsplash.com/featured/400x300?guitar" alt="Guitar">
+        <div class="content">
+          <h3>Acoustic Guitar</h3>
+          <p>Yamaha FG800 in excellent condition, includes soft case.</p>
+          <span class="price">$180</span>
+          <a class="button" href="mailto:you@example.com?subject=Interested%20in%20Acoustic%20Guitar">Contact Seller</a>
+        </div>
+      </article>
+
+      <article class="item-card">
+        <img src="https://source.unsplash.com/featured/400x300?laptop" alt="Laptop">
+        <div class="content">
+          <h3>Dell XPS 13 (2022)</h3>
+          <p>i7, 16 GB RAM, 512 GB SSD. Barely used, includes original box and charger.</p>
+          <span class="price">$750</span>
+          <a class="button" href="https://paypal.me/yourlink">Buy Now</a>
+        </div>
+      </article>
+
+            <article class="item-card">
+        <img src="https://source.unsplash.com/featured/400x300?pineapple" alt="Pineapple">
+        <div class="content">
+          <h3>Pineapple</h3>
+          <p>Its a fruit.</p>
+          <span class="price">$50</span>
+          <a class="button" href="https://paypal.me/yourlink">Buy Now</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Cody's Marketplace • Built with ♥
+  </footer>
+</body>
+</html>
